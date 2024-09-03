@@ -11,13 +11,22 @@ body{
     margin: 0;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background-color: rgb(95, 95, 95);
+    background: url(imgs/background.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#logoKopi{
+    position: absolute;
+    width: 10vw;
+    right: 2%;
+    top: 0.2vh;
 }
 
 #testcamera{
@@ -41,6 +50,10 @@ main{
     font-size: 2.5vh;
 }
 
+.Produto h2{
+    font-size: 2.4vh;
+}
+
 .quadroProdutos{
     display: flex;
     flex-direction: column;
@@ -60,6 +73,7 @@ main{
     border-radius: 20vh;
     text-align: center;
     width: 40vw;
+    font-size: 2vh;
 }
 
 .produtosSubRow{
@@ -78,7 +92,10 @@ main{
 }
 
 #logo{
-    margin-top: 5vh;
+    height: 25vh;
+    width: 40vw;
+    position:relative;
+    bottom: 5.5vh;
 }
 
 input{
@@ -107,15 +124,37 @@ input{
 }
 
 .btnNutricional{
-    background-color: darkgray;
-    height: 6vh;
+    background-color: #50849983;
+    height: 9vh;
     color: black;
     position: relative;
-    right: 20vw;
+    margin-top: 1.5vh;
     margin-bottom: 1.5vh;
     border: none;
-    padding-left: 1vh;
-    padding-right: 1vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
     font-size: 1.8vh;
     border-radius: 1.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tabelaClique{
+    position: relative;
+    margin: 0;
+}
+
+#tabelaP{
+    font-weight: bold;
+    font-size: 3vh;
+    position: relative;
+    margin: 0;
+}
+
+#produtosSubRowBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

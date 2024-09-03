@@ -1,11 +1,15 @@
+document.addEventListener('DOMContentLoaded', function(){
 Quagga.init({
     inputStream: {
         name: "Live",
         type: "LiveStream",
-        target: document.querySelector('#camera')  
+        target: document.querySelector('#camera'),
+        constraints:{
+            facingMode: "environment"
+        }
     },
     decoder: {
-        readers: ["code_128_reader"]
+        readers: ["ean_reader", "code_128_reader"]
     }
 }, function (err) {
     if (err) {
@@ -17,5 +21,10 @@ Quagga.init({
 });
 
 Quagga.onDetected(function(data){
-    console.log(data);
-})
+    const code = data.codeResult.code;
+
+    document.getElementById('infoProdutoNome').textContent = code;
+});
+
+});
+

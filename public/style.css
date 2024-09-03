@@ -22,11 +22,31 @@ main{
     align-items: center;
 }
 
-#logoKopi{
+.imgtest{
     position: absolute;
     width: 10vw;
     right: 2%;
     top: 0.2vh;
+}
+
+#camera{ 
+    top: 1vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#camera canvas{
+    height: 15vh;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 5vw;
+    width: 90%;
+    height: 100%;
+    object-fit: cover; 
 }
 
 #testcamera{
@@ -36,18 +56,19 @@ main{
     justify-content: center;
 }
 
-.imgtest{
+#logoKopi{
+    position: fixed;
     height: 10vh;
-    width: 50vw;
+    width: 30vw;
 }
 
 #instru{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 5vh;
     margin-left: 5vw;
     margin-right: 5vw;
     text-align: center;
     font-size: 2.5vh;
+    margin-top: 7vh;
 }
 
 .Produto h2{
@@ -92,10 +113,10 @@ main{
 }
 
 #logo{
-    height: 25vh;
-    width: 40vw;
+    height: 5vh;
+    width: 20vw;
     position:relative;
-    bottom: 5.5vh;
+    margin-bottom: 0.6vh;
 }
 
 input{

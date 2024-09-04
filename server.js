@@ -11,5 +11,5 @@ res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.listen(3702, () => {
-console.log(`Servidor rodando em http://localhost:${3072}`);
+console.log(`Servidor rodando em http://localhost:${3702}`);
 });

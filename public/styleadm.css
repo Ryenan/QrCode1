@@ -29,7 +29,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: top;
-    width: 25vw;
+    width: 45vw;
     height: 65vh;
     position: relative;
     top: 20vh;
@@ -42,11 +42,13 @@ main{
     width: 45%;
     border-radius: 8px;
     background-color: #ffffff73;
-    border-color: transparent;
     color: black;
+    -webkit-text-stroke-color: white;
     font-size: 3vh;
     cursor: pointer;
     font-weight: bold;
+    border-color: black;
+    border-width: 0.1vh;
 }
 
 .square button:hover{
@@ -57,7 +59,7 @@ main{
     font-weight: bold;
     font-size: 6.5vh;
     color: black;
-    -webkit-text-stroke-width: 0.18vh;
+    -webkit-text-stroke-width: 0.1vh;
     -webkit-text-stroke-color: white;
     margin-bottom: 4.5vh;
 }
@@ -75,7 +77,7 @@ main{
     border-radius: 10px;
     border-color: black;
     border-width: 0.1vh;
-    width: 15vw;
+    width: 30vw;
     height: 5vh;
     padding-left: 0.6vw;
 }
@@ -88,4 +90,32 @@ main{
 .labelInput{
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width:900px){
+    .square{
+        width: 90vw;
+        height: 55vh;
+    }
+
+    .containerLogins{
+        margin-bottom: 4.5vh;
+    }
+
+    .containerLogins input{
+        width: 35vh;
+        height: 6vh;
+    }
+
+    .square button{
+        width: 30vw;
+        height: 8vh;
+        font-size: 2.3vh;
+    }
+
+    .LoginText{
+        margin-top: 3vh;
+        margin-bottom: 2vh;
+    }
+
 }

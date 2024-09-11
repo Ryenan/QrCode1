@@ -11,9 +11,10 @@ body{
     margin: 0;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background: url(imgs/background.avif);
+    background: url(https://indieground.net/wp-content/uploads/2023/03/Freebie-GradientTextures-Preview-02.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 99vh;
 }
 
 main{
@@ -41,6 +42,7 @@ main{
 }
 
 video{
+    border: 0.3vh white solid;
     position: absolute;
     top: 0;
     left: 5vw;
@@ -58,8 +60,10 @@ video{
 
 #logoKopi{
     position: fixed;
+    left: 70%;
     height: 10vh;
     width: 30vw;
+    top: -1.5vh;
 }
 
 #instru{
@@ -68,7 +72,7 @@ video{
     margin-right: 5vw;
     text-align: center;
     font-size: 2.5vh;
-    margin-top: 7vh;
+    margin-top: 7.1vh;
 }
 
 .Produto h2{
@@ -82,16 +86,17 @@ video{
     align-items: center;
     width: 90vw;
     margin-top: 5vh;
+    border: 0.2vh white solid;
 }
 
 .infoProduto{
     position: relative;
     bottom: 1.5vh;
-    padding-right: 1vw;
-    padding-left: 1vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
     color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.03);    
-    border-radius: 20vh;
+    background-color: rgba(255, 255, 255, 0.226);    
+    border-radius: 15px;
     text-align: center;
     width: 40vw;
     font-size: 2vh;
@@ -139,7 +144,7 @@ input{
 }
 
 .nomeProduto p{
-    font-size: 7vh;
+    font-size: 5vh;
     margin-top: 3vh;
     margin-bottom: 0vh;
 }

@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    backdrop-filter: blur(2px);
+    background: url(https://i.pinimg.com/originals/88/21/9f/88219ffcd4d5ab3e1956b85d6311d197.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 99vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#camera{ 
+    top: 1vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#camera canvas{
+    height: 15vh;
+}
+
+video{
+    border: 0.3vh white solid;
+    position: absolute;
+    top: 0;
+    left: 5vw;
+    width: 90%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+#instru{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    text-align: center;
+    font-size: 2.5vh;
+    margin-top: 2.1vh;
+    color: white;
+}
+
+.produtoCadastrar{
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.1vh;
+    gap: 2vh;
+}
+
+.codigoDoProduto{
+    background-color: white;
+    width: 80vw;
+    height: 3vh;
+    border-radius: 3px;
+    font-size: 1.8vh;
+    text-align: start;
+    padding-left: 1vw;
+}
+
+
+.inputCadastrar{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputCadastrar input{
+    width: 80vw;
+    height: 3vh;
+    color: black;
+    font-size: 1.8vh;
+}
+
+.inputCadastrar label{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}

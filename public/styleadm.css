@@ -103,8 +103,9 @@ main{
     }
 
     .containerLogins input{
-        width: 35vh;
+        width: 70vw;
         height: 6vh;
+        padding-left: 1vh;
     }
 
     .square button{

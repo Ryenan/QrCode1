@@ -72,6 +72,7 @@ video{
     font-size: 1.8vh;
     text-align: start;
     padding-left: 1vw;
+    padding-top: 0.2vw;
 }
 
 
@@ -92,3 +93,38 @@ video{
     font-family: "Roboto", sans-serif;
     font-weight: 300;
 }
+
+.btn{
+    background-color: rgb(44, 47, 201);
+    border: 1px rgb(117, 31, 255) solid;
+    border-radius: 4px;
+    width: 40vw;
+    height: 6vh;
+    text-decoration: none;
+    font-size: 3vh;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.btns{
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+#btnTabela{
+    position: relative;
+    top: 1vh;
+    left: 32vw;
+    font-size: 1.7vh;
+    width: 35vw;
+    height: 6vh;
+}
+

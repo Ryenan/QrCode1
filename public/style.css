@@ -14,7 +14,7 @@ body{
     background: url(https://indieground.net/wp-content/uploads/2023/03/Freebie-GradientTextures-Preview-02.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 99vh;
+    height: 100vh;
 }
 
 main{
@@ -76,7 +76,7 @@ video{
 }
 
 .Produto h2{
-    font-size: 2.4vh;
+    font-size: 2vh;
 }
 
 .quadroProdutos{
@@ -108,6 +108,7 @@ video{
     justify-content: center;
     align-items: center;
     font-size: 1.5vh;
+    margin-top: 1vh;
     gap: 5vw;
 }
 
@@ -120,8 +121,8 @@ video{
 #logo{
     height: 5vh;
     width: 20vw;
-    position:relative;
-    margin-bottom: 0.6vh;
+    position: fixed;
+    right: 77%;
 }
 
 input{
@@ -165,6 +166,10 @@ input{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.btnNutricional:hover{
+    background-color: #324c5683;
 }
 
 #tabelaClique{

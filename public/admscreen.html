@@ -6,7 +6,7 @@
     <title>Cadastrar produto</title>
     <link rel="stylesheet" href="stylecrud.css">
 </head>
-<body>
+<body onload="checkLogin()">
     <h1 id="instru">Aponte a câmera para o código de barras.</h1>
     <div id="camera"></div>
     <div class="produtoCadastrar">
@@ -34,10 +34,13 @@
                 <label for="nomeProdutoCadastrar">Data de fabricação</label>
                 <input type="date" name="nomeProdutoCadastrar" id="">
             </div>
-            <button>Confirmar</button>
-            <button>Registrar tabela nutricional</button>
+                <div class="btns">
+                    <button class="btn">Confirmar</button>
+                    <a href="" class="btn" id="btnTabela">Registrar tabela nutricional</a>
+                </div>
         </div>
-
+        
+    <script src="crudtelaadm.js"></script>
     <script src="quagga.min.js"></script>
     <script src="script.js"></script>
 </body>

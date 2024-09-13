@@ -2,7 +2,7 @@
 
 *{
     box-sizing: border-box;
-    color: rgb(0, 0, 0);
+    color: white(0, 0, 0);
     font-family: "Roboto", sans-serif;
 }
 
@@ -22,6 +22,8 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.568);
+    height: 100vh;
 }
 
 .square{
@@ -29,38 +31,39 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: top;
-    width: 45vw;
-    height: 65vh;
+    width: 35%;
+    height: 60%;
     position: relative;
     top: 20vh;
     border-radius: 20px;
-    background-color: #ffffffa6;
+    background-color: #3d3d3dde;
 }
 
 .square button{
-    height: 9vh;
-    width: 45%;
-    border-radius: 8px;
-    background-color: #ffffff73;
-    color: black;
+    height: 7vh;
+    width: 25%;
+    border: 1px 1px 0 0;
+    border-radius: 10px;
+    background-color: #555555d0;
+    color: rgb(255, 255, 255);
     -webkit-text-stroke-color: white;
     font-size: 3vh;
     cursor: pointer;
     font-weight: bold;
-    border-color: black;
+    border-color: rgb(202, 202, 202);
     border-width: 0.1vh;
 }
 
 .square button:hover{
-    background-color: #ffffffde;
+    background-color: #474747de;
 }
 
 .LoginText{
     font-weight: bold;
     font-size: 6.5vh;
-    color: black;
+    color: white;
     -webkit-text-stroke-width: 0.1vh;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
     margin-bottom: 4.5vh;
 }
 
@@ -85,6 +88,7 @@ main{
 .containerLogins label{
     font-size: 2.5vh;
     font-weight: 400;
+    color: white;
 }
 
 .labelInput{

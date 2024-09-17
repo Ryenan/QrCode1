@@ -124,7 +124,7 @@ video{
 
 #btnTabela{
     position: relative;
-    top: 1vh;
+    top: -1vh;
     left: 32vw;
     font-size: 1.7vh;
     width: 35vw;

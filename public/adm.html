@@ -10,20 +10,20 @@
     <main>
         <section class="square">
             <h1 class="LoginText">Login</h1>
+            <form action="/auth/login" method="POST">
                 <div class="containerLogins">
-                    <div class="labelInput">
-                        <label for="user">Usuário</label>
-                        <input type="text" name="user" id="user">
-                    </div>
-                    <div class="labelInput">
-                        <label for="pass">Senha</label>
-                        <input type="password" name="pass" id="pass">
-                    </div>
+                  <div class="labelInput">
+                    <label for="user">Usuário</label>
+                    <input type="text" name="username" id="user" required>
+                  </div>
+                  <div class="labelInput">
+                    <label for="pass">Senha</label>
+                    <input type="password" name="password" id="pass" required>
+                  </div>
                 </div>
-                <button onclick="login()">Confirmar</button>
+                <button type="submit">Confirmar</button>
+              </form>              
         </section>
     </main>
-    <script src="crudtelaadm.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>

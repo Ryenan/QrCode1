@@ -21,11 +21,14 @@ Quagga.init({
     Quagga.start();
 });
 
-Quagga.onDetected(function(data){
+Quagga.onDetected(function(data) {
     const code = data.codeResult.code;
 
+    // Caso você também queira exibir o código em outro local, ajuste aqui
     document.getElementById('infoProdutoNome').textContent = code;
-});
+
+    // Exibe o código no elemento com id 'codigoDoProduto'
+    document.getElementById('codigoDoProduto').textContent = code;
 
 });
-
+});

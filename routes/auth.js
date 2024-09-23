@@ -45,22 +45,4 @@ router.post('/login', async (req, res) => {
 
 });
 
-router.post('/product', async (req, res) => {
-  const { codigoProduto, nomeProduto, nomeMarcaCadastrar, nomePreçoCadastrar, dataValidade, dataFabricacao } = req.body;
-  
-  try {
-    const newProduct = await Product.create({
-        codigo: codigoProduto,
-        nome: nomeProduto,
-        marca: nomeMarcaCadastrar,
-        preco: nomePreçoCadastrar,
-        validade: dataValidade,
-        fabricacao: dataFabricacao
-    });
-    res.json({ message: 'Produto cadastrado com sucesso', product: newProduct });
-} catch (error) {
-    res.status(500).json({ error: 'Erro ao cadastrar o produto' });
-}
-});
-
 module.exports = router; 

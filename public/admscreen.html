@@ -10,15 +10,15 @@
 <body>
     <h1 id="instru">Aponte a câmera para o código de barras.</h1>
     <div id="camera"></div>
-    <form action="auth/product" method="POST">
+    <form action="/products" method="POST">
         <div class="produtoCadastrar">
             <div class="inputCadastrar">
-                <label for="nomeProdutoCadastrar">Código produto</label>
-                <div class="codigoDoProduto" id="codigoDoProduto">Scannei o produto...</div>
+                <label for="codigoProdutoCadastrar">Código do Produto</label>
+                <input type="text" name="codigoProduto" id="codigoProdutoCadastrar" value="Scannei o produto..." readonly/>
             </div>
             <div class="inputCadastrar">
-                <label for="nomeProdutoCadastrar">Nome do produto</label>
-                <input type="text" name="nomeProdutoCadastrar" id="">
+                <label for="nomeProdutoCadastrar">Nome do Produto</label>
+                <input type="text" name="nomeProdutoCadastrar" id="" required>
             </div>
             <div class="inputCadastrar">
                 <label for="nomeProdutoCadastrar">Marca</label>
@@ -26,23 +26,23 @@
             </div>
             <div class="inputCadastrar">
                 <label for="nomeProdutoCadastrar">Preço</label>
-                <input type="number" name="nomePreçoCadastrar" id="">
+                <input type="number" name="nomePreçoCadastrar" id="" step="0.01" required>
             </div>
             <div class="inputCadastrar">
-                <label for="nomeProdutoCadastrar">Data de validade</label>
+                <label for="dataValidade">Data de Validade</label>
                 <input type="date" name="dataValidade" id="">
             </div>
             <div class="inputCadastrar">
-                <label for="nomeProdutoCadastrar">Data de fabricação</label>
+                <label for="dataFabricacao">Data de Fabricação</label>
                 <input type="date" name="dataFabricacao" id="">
             </div>
             <div class="btns">
-                <button class="btn">Confirmar</button>
-                <a href="" class="btn" id="btnTabela">Registrar tabela nutricional</a>
+                <button class="btn" type="submit">Confirmar</button>
+                <a href="#" class="btn" id="btnTabela">Registrar Tabela Nutricional</a>
             </div>
         </div>
-    </form>
-        <script src="script.js"></script>
+    </form>    
+        <script src="scriptADM.js"></script>
         <script src="quagga.min.js"></script>
         <script src=".js"></script>
     </body>

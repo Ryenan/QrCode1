@@ -16,17 +16,17 @@ const Product = sequelize.define('Product', {
         allowNull: false,
     },
     preco: {
-        type: DataTypes.STRING,
+        type: DataTypes.FLOAT,
         allowNull: false,
     },
     validade: {
-        type: DataTypes.STRING,
+        type: DataTypes.DATE,
         allowNull: false,
     },
     fabricacao: {
-        type: DataTypes.STRING,
+        type: DataTypes.DATE,
         allowNull: false,
     }
 });
 
-module.exports = Product;
+module.exports = Product; 

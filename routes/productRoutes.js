@@ -27,13 +27,28 @@ router.post('/', async (req, res) => {
 
 });
 
-router.get('/listar', async (req, res) => {
+router.get('/listarProdutos', async (req, res) => {
   try {
-    const products = await Product.findAll();
-    res.json(products);
+      const products = await Product.findAll();
+      res.json(products); 
   } catch (error) {
-    res.status(500).json({ error: 'Erro ao buscar produtos' });
+      console.error('Erro ao listar produtos:', error);
+      res.status(500).json({ error: 'Erro ao listar produtos' });
   }
 });
+
+router.put('/product/:codigo', async (req, res) => {
+  const { codigo } = req.params;
+  await Product.update(req.body, { where: { codigo } });
+  res.json({ message: 'Produto atualizado com sucesso' });
+});
+
+router.delete('/product/:codigo', async (req, res) => {
+  const { codigo } = req.params;
+  await Product.destroy({ where: { codigo } });
+  res.json({ message: 'Produto excluído com sucesso' });
+});
+
+
 
 module.exports = router;

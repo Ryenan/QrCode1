@@ -45,4 +45,9 @@ router.post('/login', async (req, res) => {
 
 });
 
+router.post('/edit', (req, res) => {
+  res.json({ success: true }); 
+ 
+});
+
 module.exports = router; 

@@ -8,11 +8,11 @@
 </head>
 <body>
     <section>
-        <h1>Lista de produtos</h1>
-        <div class="search">
-            <input type="text" id="searchBar" placeholder="Digite o nome do produto...">
+        <div class="midScreen">
+                <h1>Lista de produtos</h1>
+                <input type="text" id="searchBar" placeholder="Digite o nome do produto...">
+                <ul id="productList"></ul>
         </div>
-        <ul id="productList"></ul>
             <div id="productForm">
                 <div class="inputCadastrar">
                     <label for="codigoProdutoCadastrar">Código do Produto</label>
@@ -44,8 +44,7 @@
                             <button class="btn" id="deleteButton">Excluir</button>
                         </div>
                         <div class="botoesEditar">
-                            <a href="#" onclick="sendPost('/auth/edit', { data: 'valor' }); return false;" class="btn" id="btnTabela">Registrar produto</a>
-                            <a href="#" onclick="sendPost('/auth/route2', { data: 'valor' }); return false;" class="btn" id="btnTabela">Registrar Tabela Nutricional</a>
+                            <a href="#" onclick="sendPost('/auth/edit', { data: 'valor' }); return false;" class="btn" id="btnTabela">Voltar</a>
                         </div>
                 </div>
             </div>

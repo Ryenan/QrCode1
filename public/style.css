@@ -189,3 +189,56 @@ input{
     justify-content: center;
     align-items: center;
 }
+
+@media (min-width: 800px) {
+
+    main{
+        display: flex;
+        flex-direction: row;
+        gap: 2.5vw;
+    }
+
+    .quadroProdutos{
+        width: 20vw;
+        margin-top: 20vh;
+        margin-right: 2vw;
+    }
+    
+    .infoProduto{
+        padding-top: 1vh;
+        width: 22vw;
+        font-size: 4vh;
+        height: 7.5vh;
+    }
+
+    .cameraDiv{
+        position: relative;
+        right: 3vw;
+        bottom: 18.7vh;
+    }
+
+    #instru{
+        font-size: 3vh;
+        width: 30vw;
+        padding-left: 5vw;
+    }
+
+    #valorPreco{
+        padding: 0;
+    }
+
+    #logo{
+        top: 45%;
+        width: 12vw;
+        height: 12vh;
+        left: 16.5%;
+    }
+
+    #logoKopi{
+        top: 50%;
+        width: 15vw;
+        height: 30vh;
+        left: 15%;
+    }
+
+}

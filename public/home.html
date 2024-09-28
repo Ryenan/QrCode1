@@ -11,12 +11,14 @@
 <body>
     <main>
         <a href="http://localhost:3000/adm.html"><img id="logoKopi" src="imgs/logomercadinhoteste.png" alt=""></a>
-        <h1 id="instru">Aponte a câmera para o código de barras.</h1>
-        <div id="camera"></div>
+        <div class="cameraDiv">
+            <h1 id="instru">Aponte a câmera para o código de barras.</h1>
+            <div id="camera"></div>
+        </div>    
         <fieldset class="quadroProdutos">
             <div class="nomeProduto">
                 <h2>Preço</h2>
-                <p class="infoProduto">199,99</p>
+                <p class="infoProduto" id="valorPreco">199,99</p>
             </div>
             <div class="produtosLista">
                 <div class="produtosSubRow">
@@ -39,24 +41,20 @@
                         <p class="infoProduto">Test Test Test</p>
                     </div>
                 </div>
-                    <div class="produtosSubRow" id="produtosSubRowBtn">
-                            <button class="btnNutricional">
-                                <p id="tabelaP">Tabela nutricional</p>
-                                <p id="tabelaClique">clique para ver!</p>
-                            </button>
-                      <!-- <div class="Produto">
+                <div class="produtosSubRow" id="produtosSubRowBtn">
+                    <!-- <div class="Produto">
                         <script>
-                                // if { //tabela do produto = 1
-                                    // imagem = Trans
-                                    // else = Xtrans
-                                //}
-                            </script> 
-                        </div> --> 
-                    </div>
+                            // if { //tabela do produto = 1
+                            // imagem = Trans
+                            // else = Xtrans
+                            //}
+                        </script> 
+                    </div> --> 
                 </div>
             </div>
-        </fieldset>
-        <img class="imgtest" id="logo" src="imgs/logo kopi.png" alt="">
+        </div>
+    </fieldset>
+    <img class="imgtest" id="logo" src="imgs/logo kopi.png" alt="">
     </main>
     <script src="quagga.min.js"></script>
     <script src="script.js"></script>

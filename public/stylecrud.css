@@ -4,16 +4,20 @@
     font-family: "Roboto", sans-serif;
 }
 
+html{
+    background-color: #3d3d3d;
+}
+
 body{
     padding: 0;
     margin: 0;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     backdrop-filter: blur(2px);
-    background: rgb(61, 61, 61);
+    background: #3d3d3d;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 99vh;
+    height: 100vh;
 }
 
 main{
@@ -98,7 +102,7 @@ video{
 }
 
 .btn{
-    background-color: rgb(44, 44, 44);
+    background-color: #6b6b6b;
     border: 1px rgb(160, 160, 160) solid;
     border-radius: 4px;
     width: 50vw;
@@ -115,6 +119,10 @@ video{
     position: relative;
 }
 
+.btn:hover{
+    background-color: #282828;
+}
+
 .btns{
     margin-top: 2vh;
     display: flex;
@@ -124,14 +132,6 @@ video{
     align-items: center;
 }
 
-#btnTabela{
-    position: relative;
-    top: -1vh;
-    font-size: 1.5vh;
-    width: 35vw;
-    height: 6vh;
-    background-color: #424242;
-}
 
 .botoesEditar{
     display: flex;

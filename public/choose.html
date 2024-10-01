@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha o que deseja</title>
+    <link rel="stylesheet" href="stylechoose.css">
+</head>
+<body>
+    <main>
+        <img id="logoKopi" src="imgs/logo kopi.png" alt="">
+        <section>
+            <div class="buttons">
+                <div class="card">
+                    <button onclick="createPage('/routes/auth/createPage', { data: 'valor' }); return false;">
+                        <img src="imgs/create.png" alt="">
+                        Cadastrar Produto
+                    </button>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="card">
+                    <button onclick="editPage('/routes/auth/editPage', { data: 'valor' }); return false;">
+                        <img src="imgs/delete-button.png" alt="">
+                        Editar ou Excluir Produto
+                    </button>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="scriptChoose.js"></script>
+</body>
+</html>

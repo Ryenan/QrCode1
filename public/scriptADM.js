@@ -1,3 +1,15 @@
+function goBack() {
+    window.history.back();
+  } 
+
+//JEITO PORCO DE FAZER, VAMO TROCAR :THUMBSUP:
+
+window.onload = function() {
+    if (!localStorage.getItem('token')) {
+      window.location.href = '/adm.html';
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     Quagga.init({
         inputStream: {
@@ -27,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function sendPost(url, data) {
+function createPage(url, data) {
     fetch(url, {
         method: 'POST',
         headers: {
@@ -44,7 +56,9 @@ function sendPost(url, data) {
     })
     .then(data => {
         console.log(data);
-        window.location.href = '/editscreen.html'; 
+        window.location.href = '/admscreen.html'; 
     })
     .catch(error => console.error('Erro:', error));
 }
+
+

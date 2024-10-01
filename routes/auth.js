@@ -6,6 +6,20 @@ const { Product } = require('../models/Product');
 
 const router = express.Router();
 
+function authenticateToken(req, res, next){
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1];
+
+  if (!token) return res.status(401).json({ error: 'Token não fornecido'});
+
+  jwt.verify (token, 'secreto', (err, user) => {
+    if (err) return res.status(403).json({ error: 'Token inválido ou expirado'});
+
+    req.user = user;
+    next()
+  });
+}
+
 router.post('/register', async (req, res) => {
   const { username, password } = req.body;
 
@@ -41,13 +55,27 @@ router.post('/login', async (req, res) => {
 
   const token = jwt.sign({ id: user.id }, 'secreto', { expiresIn: '1h' });
 
-  res.redirect('/admscreen.html');
+  res.json({token});
 
 });
 
-router.post('/edit', (req, res) => {
-  res.json({ success: true }); 
- 
+router.post('/createPage', authenticateToken, (req, res) => {
+  res.json({ message: 'Autorizado para acessar a página de criação' });
 });
 
+router.post('/editPage', authenticateToken, (req, res) => {
+  res.json({ message: 'Autorizado para acessar a página de edição' });
+});
+
+router.get('/admscreen', authenticateToken, (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/admscreen.html'));
+});
+
+router.get('/editscreen', authenticateToken, (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/editscreen.html'));
+});
+
+router.get('/choose.html', authenticateToken, (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/choose.html'));
+});
 module.exports = router; 

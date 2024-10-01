@@ -1,3 +1,9 @@
+window.onload = function() {
+    if (!localStorage.getItem('token')) {
+      window.location.href = '/adm.html';
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function () {
     const searchBar = document.getElementById('searchBar');
     const productList = document.getElementById('productList');
@@ -10,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let allProducts = [];
 
-    // Função para buscar produtos do servidor
     function fetchProducts() {
         fetch('/products/listarProdutos')
             .then(response => response.json())
@@ -22,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
             .catch(error => console.error('Erro ao listar produtos:', error));
     }
 
-    // Função para exibir a lista de produtos
     function renderProductList(products) {
         productList.innerHTML = ''; // Limpa a lista
         if (products.length === 0) {
@@ -131,6 +135,7 @@ function sendPost(url, data) {
     })
     .then(data => {
         console.log(data); 
+        window.location.href = '/admscreen.html'
     })
     .catch(error => console.error('Erro:', error));
 }

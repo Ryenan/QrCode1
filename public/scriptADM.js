@@ -1,8 +1,3 @@
-function goBack() {
-    window.history.back();
-  } 
-
-//JEITO PORCO DE FAZER, VAMO TROCAR :THUMBSUP:
 
 window.onload = function() {
     if (!localStorage.getItem('token')) {

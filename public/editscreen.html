@@ -44,11 +44,12 @@
                             <button class="btn" id="deleteButton">Excluir</button>
                         </div>
                         <div class="botoesEditar">
-                            <a href="#" onclick="sendPost('/auth/edit', { data: 'valor' }); return false;" class="btn" id="btnTabela">Voltar</a>
+                            <button id="btnBack" onclick="choosePage('/routes/auth/choosePage', { data: 'valor' }); return false;">Voltar</button>
                         </div>
                 </div>
             </div>
     </section>
     <script src="scriptEdit.js"></script>
+    <script src="scriptChoose.js"></script>
 </body>
 </html>

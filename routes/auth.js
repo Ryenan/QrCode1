@@ -2,21 +2,28 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User'); 
+const path = require('path');
 const { Product } = require('../models/Product');
 
 const router = express.Router();
 
-function authenticateToken(req, res, next){
+function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
 
-  if (!token) return res.status(401).json({ error: 'Token não fornecido'});
+  if (!token) {
+      console.log('Token não fornecido');
+      return res.status(401).json({ error: 'Token não fornecido'});
+  }
 
-  jwt.verify (token, 'secreto', (err, user) => {
-    if (err) return res.status(403).json({ error: 'Token inválido ou expirado'});
+  jwt.verify(token, 'secreto', (err, user) => {
+      if (err) {
+          console.log('Token inválido ou expirado');
+          return res.status(403).json({ error: 'Token inválido ou expirado'});
+      }
 
-    req.user = user;
-    next()
+      req.user = user;
+      next();
   });
 }
 
@@ -67,6 +74,10 @@ router.post('/editPage', authenticateToken, (req, res) => {
   res.json({ message: 'Autorizado para acessar a página de edição' });
 });
 
+router.post('/choosePage', authenticateToken, (req, res) => {
+  res.json({ message: 'Autorizado para acessar a página de criação' });
+});
+
 router.get('/admscreen', authenticateToken, (req, res) => {
   res.sendFile(path.join(__dirname, '../public/admscreen.html'));
 });
@@ -78,4 +89,5 @@ router.get('/editscreen', authenticateToken, (req, res) => {
 router.get('/choose.html', authenticateToken, (req, res) => {
   res.sendFile(path.join(__dirname, '../public/choose.html'));
 });
+
 module.exports = router; 

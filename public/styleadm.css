@@ -41,17 +41,17 @@ main{
 
 .square button{
     height: 7vh;
-    width: 25%;
-    border: 1px 1px 0 0;
+    width: 15vw;
     border-radius: 10px;
     background-color: #555555d0;
     color: rgb(255, 255, 255);
     -webkit-text-stroke-color: white;
-    font-size: 3vh;
+    font-size: 15px;
     cursor: pointer;
     font-weight: bold;
     border-color: rgb(202, 202, 202);
     border-width: 0.1vh;
+    border: none;
 }
 
 .square button:hover{

@@ -49,6 +49,21 @@ router.delete('/product/:codigo', async (req, res) => {
   res.json({ message: 'Produto excluído com sucesso' });
 });
 
+router.get('/productByCode/:codigo', async (req, res) => {
+  try {
+      const codigo = req.params.codigo;
+      const product = await Product.findOne({ where: { codigo: codigo } });
+
+      if (product) {
+          res.json(product); 
+      } else {
+          res.status(404).json({ error: 'Produto não encontrado' });
+      }
+  } catch (error) {
+      console.error('Erro ao buscar produto por código:', error);
+      res.status(500).json({ error: 'Erro ao buscar produto' });
+  }
+});
 
 
 module.exports = router;

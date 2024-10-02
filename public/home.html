@@ -56,6 +56,47 @@
     </fieldset>
     <img class="imgtest" id="logo" src="imgs/logo kopi.png" alt="">
     </main>
+    <script>
+        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+        navigator.mediaDevices.getUserMedia({ audio: false, video: true }).then(function(stream) {
+
+    alert("Permissão Liberada!");
+
+    }).catch(function(err) {
+
+    switch(err.name) 
+    {
+
+        case "NotAllowedError":
+
+            alert("Permissão Recusada");
+
+        break;
+
+        case "NotFoundError":
+        case "DevicesNotFoundError":
+
+            alert("Nenhum Dispositivo");
+
+        break;
+
+        case "NotReadableError":
+        case "TrackStartError":
+
+            alert("Dispositivo Ocupado");
+
+        break;
+
+        default:
+
+            alert("Outras Falhas");
+
+        break;
+
+    }
+
+    });
+    </script>
     <script src="quagga.min.js"></script>
     <script src="script.js"></script>
 </body>

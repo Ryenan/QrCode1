@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function(){
             .then(product => {
                 if (product) {
                     document.getElementById('infoProdutoNome').textContent = product.nome;
-                    document.getElementById('valorPreco').textContent = product.preco;
+                    document.getElementById('valorPreco).textContent = product.preco;
                     document.querySelector('.infoProdutoMarca').textContent = product.marca;
                     document.querySelector('.infoProdutoValidade').textContent = product.validade.split('T')[0];
                     document.querySelector('.infoProdutoFabricacao').textContent = product.fabricacao.split('T')[0];

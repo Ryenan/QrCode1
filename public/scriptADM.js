@@ -29,15 +29,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     Quagga.onDetected(function(data) {
         const code = data.codeResult.code;
-        document.getElementById('codigoDoProduto').textContent = code;
-        document.getElementById('codigoProduto').value = code;
+
+        // Verifica o elemento para exibir o código
+        const codigoDoProdutoElement = document.getElementById('codigoProdutoCadastrar');
+        if (codigoDoProdutoElement) {
+            codigoDoProdutoElement.value = code; // Atualiza o valor do input
+        } else {
+            console.error('Elemento com ID "codigoProdutoCadastrar" não encontrado.');
+        }
     });
 
     if (!localStorage.getItem('token')) {
         window.location.href = '/adm.html';
     }
-
 });
+
 
 function createPage(url, data) {
     fetch(url, {

@@ -16,6 +16,7 @@
     "fs": "^0.0.1-security",
     "mysql2": "^3.11.2",
     "sequelize": "^6.37.3",
+    "bcryptjs": "^2.4.3",
     "sqlite3": "^5.1.7"
   }
 }

@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
     res.redirect('/admscreen.html');
 } catch (error) {
     console.error('Erro ao cadastrar produto:', error);
-    res.status(500).json({ error: 'Erro ao cadastrar o produto' });
+    res.redirect('/admscreen.html?message=Erro ao cadastrar o produto');
 }
 
 });

@@ -22,3 +22,9 @@ app.get('/', (req, res) => {
 sequelize.authenticate()
   .then(() => console.log('Conectado ao MySQL!'))
   .catch((error) => console.log('Erro ao conectar ao MySQL:', error));
+
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
+

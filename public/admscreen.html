@@ -46,5 +46,13 @@
         <script src="scriptChoose.js"></script>
         <script src="quagga.min.js"></script>
         <script src=".js"></script>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const message = urlParams.get('message');
+
+            if (message) {
+                alert(message);
+            }
+        </script>
     </body>
     </html>

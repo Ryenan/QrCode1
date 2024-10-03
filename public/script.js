@@ -1,3 +1,18 @@
+const video = document.getElementById('camera');
+
+document.getElementById('btnActiveCam').addEventListener('click', () => {
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then((stream) => {
+            video.srcObject = stream;
+            window.location.reload();
+        })
+        .catch((err) => {
+            console.error('Erro ao acessar a câmera: ', err);
+        });
+});
+
+
+
 document.addEventListener('DOMContentLoaded', function(){
 
     Quagga.init({

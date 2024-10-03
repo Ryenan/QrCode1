@@ -123,6 +123,7 @@ video{
     color: white;
     position: relative;
     transition: all ease-in-out 0.2s;
+    cursor: pointer;
 }
 
 .btn:hover{

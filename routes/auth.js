@@ -74,6 +74,10 @@ router.post('/editPage', authenticateToken, (req, res) => {
   res.json({ message: 'Autorizado para acessar a página de edição' });
 });
 
+router.post('/homePage', authenticateToken, (req, res) => {
+  res.json({ message: 'Autorizado para acessar a página de criação' });
+});
+
 router.post('/choosePage', authenticateToken, (req, res) => {
   res.json({ message: 'Autorizado para acessar a página de criação' });
 });

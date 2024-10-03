@@ -32,6 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('codigoDoProduto').textContent = code;
         document.getElementById('codigoProduto').value = code;
     });
+
+    if (!localStorage.getItem('token')) {
+        window.location.href = '/adm.html';
+    }
+
 });
 
 function createPage(url, data) {

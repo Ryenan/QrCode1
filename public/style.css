@@ -30,6 +30,29 @@ main{
     top: 0.2vh;
 }
 
+#btnActiveCam{
+    position: fixed;
+    top: 18vh;
+    color: black;
+    border-radius: 4px;
+    border: none;
+    width: 30vw;
+    height: 4vh;
+    font-size: 1.6vh;
+    font-weight: bold;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#btncActiveCam{
+    background-color: gray;
+}
+
+.cameraDiv{
+    position: relative;
+    z-index: 999;
+}
+
 #camera{ 
     top: 1vh;
     position: relative;
@@ -85,7 +108,7 @@ video{
     justify-content: center;
     align-items: center;
     width: 90vw;
-    margin-top: 5vh;
+    margin-top: 8vh;
     border: 0.2vh white solid;
 }
 
@@ -239,6 +262,11 @@ input{
         width: 15vw;
         height: 30vh;
         left: 15%;
+    }
+
+    #btnActiveCam{
+        top: 32vh;
+        left: 8vw;
     }
 
 }

@@ -10,11 +10,38 @@
     <main>
         <img id="logoKopi" src="imgs/logo kopi.png" alt="">
         <section>
-            <div class="buttons">
-                <div class="card">
-                    <button onclick="createPage('/routes/auth/createPage', { data: 'valor' }); return false;">
-                        <img src="imgs/create.png" alt="">
-                        Cadastrar Produto
+            <div class="btns1">
+                <div class="buttons">
+                    <div class="card">
+                        <button onclick="homePage('/routes/auth/homePage', { data: 'valor' }); return false;">
+                            <img src="imgs/home.png" alt="">
+                            Página inicial
+                        </button>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div class="card">
+                        <button onclick="createPage('/routes/auth/createPage', { data: 'valor' }); return false;">
+                            <img src="imgs/create.png" alt="">
+                            Cadastrar Produto
+                        </button>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="btns1">
+                <div class="buttons">
+                    <div class="card">
+                        <button onclick="editPage('/routes/auth/editPage', { data: 'valor' }); return false;">
+                            <img src="imgs/delete-button.png" alt="">
+                        Editar ou Excluir Produto
                     </button>
                     <span></span>
                     <span></span>
@@ -25,8 +52,8 @@
             <div class="buttons">
                 <div class="card">
                     <button onclick="editPage('/routes/auth/editPage', { data: 'valor' }); return false;">
-                        <img src="imgs/delete-button.png" alt="">
-                        Editar ou Excluir Produto
+                        <img src="" alt="">
+                        
                     </button>
                     <span></span>
                     <span></span>
@@ -34,6 +61,7 @@
                     <span></span>
                 </div>
             </div>
+        </div>
         </section>
     </main>
     <script src="scriptChoose.js"></script>

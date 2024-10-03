@@ -35,7 +35,7 @@ body{
 }
 
 #btnBack:hover{
-    background-color: #424242;
+    background-color: #282828;
 }
 
 #productForm{
@@ -74,7 +74,7 @@ main{
 }
 
 .btn{
-    background-color: rgb(44, 44, 44);
+    background-color: rgb(107, 107, 107);
     border: 1px rgb(160, 160, 160) solid;
     border-radius: 4px;
     width: 40vw;
@@ -89,6 +89,11 @@ main{
     justify-content: center;
     color: white;
     position: relative;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #282828;
 }
 
 .btns{

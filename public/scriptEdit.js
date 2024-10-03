@@ -5,6 +5,10 @@ window.onload = function() {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
+    if (!localStorage.getItem('token')) {
+        window.location.href = '/adm.html';
+    }
+    
     const searchBar = document.getElementById('searchBar');
     const productList = document.getElementById('productList');
 

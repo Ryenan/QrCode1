@@ -15,6 +15,7 @@
             <h1 id="instru">Aponte a câmera para o código de barras.</h1>
             <div id="camera"></div>
         </div>    
+        <button id="btnActiveCam">Clique para ativar a câmera</button>
         <fieldset class="quadroProdutos">
             <div class="nomeProduto">
                 <h2>Preço</h2>
@@ -57,10 +58,9 @@
     <img class="imgtest" id="logo" src="imgs/logo kopi.png" alt="">
     </main>
     <script>
+
         navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
         navigator.mediaDevices.getUserMedia({ audio: false, video: true }).then(function(stream) {
-
-    alert("Permissão Liberada!");
 
     }).catch(function(err) {
 
@@ -96,6 +96,13 @@
     }
 
     });
+
+    const videoStream = await navigator.mediaDevices.getUserMedia({ video: true })
+
+    chrome.contentSettings.camera.set({
+
+    })
+
     </script>
     <script src="quagga.min.js"></script>
     <script src="script.js"></script>
